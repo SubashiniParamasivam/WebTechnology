@@ -1,0 +1,76 @@
+<html>
+<head>
+<style>
+body
+{
+background-image:url("p5.jpg");
+background-size:cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+label{
+	display:inline-block;
+	width:300px;
+	margin-bottom:10px;
+	text-align:left;
+	font-size:20px;
+}
+.Addr{
+	display:inline-block;
+	width:300px;
+	margin-left:200px;
+	text-align:left;
+	font-size:20px;
+}
+
+
+input[type=text],[type=date],[type=number]{
+	width:40%;
+	height:35px;
+	border-style:solid;
+	border-radius:5px;
+	border-width:1px;
+}
+input[type=radio]{
+	width:20%;
+	height:15px;
+	border-style:solid;
+	border-radius:5px;
+	border-width:1px;
+	border-color:black;
+}
+select{
+	width:40%;
+	height:35px;
+	border-style:solid;
+	border-radius:5px;
+	border-width:1px;
+	border-color:black;
+}
+button
+{
+	display:inline-block;
+	color:white;
+	border-radius: 15px;
+	background-color:green;
+	padding:12px 28px;
+	font-size:18px;
+}
+</style>
+</head>
+<body>
+<form action="Booked.php" method="POST">
+<div align="center">
+	<h2 style="color:darkolivegreen; font-family:'Lucida Calligraphy';">Booking My Room<img src="download.jpg" height=25px width=25px padding=10px></h2><br><br><br>
+	<label>No. of Rooms: </label><input type="number" value="1" range=10 name="rooms" required ><br><br>
+	<label>Type of Room:</label><select name="typeofroom">
+		<option value="ACS">AC-Single bed</option>
+		<option value="ACD">AC-Double bed</option>
+		<option value="NACS">Non AC-Single bed</option>
+		<option value="NACD">Non AC-Double bed</option>
+	</select><br><br>
+	<label>Date Required: </label><input type="date" name="dates" min="2018/08/27" max="2018/10/27" required><br><br>
+	<label>No. of Days: </label><input type="number" name="noofdays"><br><br>
+	<button type="Submit" name="Booked">Book My Room</button>
+</div></form>
+</html>
